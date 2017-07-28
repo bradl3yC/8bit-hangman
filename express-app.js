@@ -5,18 +5,10 @@ const bodyParser = require('body-parser')
 const app = express()
 const fs = require('fs')
 
-//functions
 const getRandomInt = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-const hideWord = (word) => {
-  hiddenWord = word.split('')
-  .map(function(character){
-    return character = "_"
-  }).join(" ")
 }
 
 //global variables
@@ -31,6 +23,28 @@ let displayError = ""
 let hiddenWord
 let attemptedLettersArray = []
 let attemptsCounter = 0
+let gameWord
+
+//functions
+
+const hideWord = (word) => {
+  hiddenWord = word.split('')
+  .map(function(character){
+    return character = "_"
+  }).join("")
+}
+
+const checkLetter = (attemptedLetter, gameWord, hiddenWord) => {
+  gameWord = gameWord.split("")
+  hiddenWord = hiddenWord.split("")
+  for (var i = 0; i < gameWord.length; i++) {
+    if (gameWord[i] === attemptedLetter) {
+      hiddenWord[i] = attemptedLetter
+    }
+  }
+  return hiddenWord.join("")
+}
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -49,30 +63,37 @@ app.get('/', (request, response) => {
 
 app.get('/easy', (request, response) => {
   hideWord(easyWord)
+  gameWord = easyWord
   response.render("game", {hiddenWord})
 })
 
 app.get('/normal', (request, response) => {
   hideWord(normalWord)
+  gameWord = normalWord
   response.render("game", {hiddenWord})
 })
 
 app.get('/hard', (request, response) => {
   hideWord(hardWord)
+  gameWord = hardWord
   response.render("game", {hiddenWord})
 })
 
 //Validate to see if a letter has been guessed before
 //validate that only 1 character was entered on the attempt
 //Validate that number of attemps <= 8
+// only increment counter if unsuccessful
 
 app.post('/attempt', (request, response) => {
   const attemptedLetter = request.body.attemptedLetter
+  console.log(gameWord)
+  console.log(hiddenWord)
   if (attemptsCounter < 8) {
     if (attemptedLettersArray.includes(attemptedLetter)){
       displayError = "You've already guessed that letter! Please try again!"
     } else {
-      attemptsCounter++
+      hiddenWord = checkLetter(attemptedLetter, gameWord, hiddenWord)
+      // attemptsCounter++  fix this later
       attemptedLettersArray.push(attemptedLetter)
       displayError = ""
     }
