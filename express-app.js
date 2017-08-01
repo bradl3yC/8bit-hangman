@@ -49,16 +49,6 @@ const getHardWord = () => {
   return hardWord
 }
 
-// let game = {
-//     attemptedLettersArray: [],
-//     badAttemptCounter: 0,
-//     attemptedLetter: undefined,
-//     displayedMessage: undefined,
-//     fullWord: undefined,
-//     hiddenWord: undefined,
-//     outcome: undefined
-// }
-
 const hideWord = (word) => {
   return word.split('').map(function(character) {
      return character = '_'
@@ -80,8 +70,6 @@ app.get('/easy', (request, response) => {
   let easyWord = getEasyWord()
   game.hiddenWord = hideWord(easyWord)
   game.fullWord = easyWord
-  // request.session.fullWord = fullWord
-  // request.session.easyWord = easyWord
   response.render('game', game)
 })
 
@@ -98,7 +86,6 @@ app.get('/hard', (request, response) => {
   game = request.session
 
   let hardWord = getHardWord()
-  console.log(hardWord)
   game.hiddenWord = hideWord(hardWord)
   game.fullWord = hardWord
   response.render('game', game)
@@ -112,7 +99,6 @@ app.get('/result', (request, response) => {
 
 app.post('/attempt', (request, response) => {
   game = request.session
-
   game.displayedMessage = ''
 
   if (game.badAttemptCounter >= 8) {
