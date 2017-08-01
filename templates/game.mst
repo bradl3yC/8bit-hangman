@@ -17,7 +17,7 @@
     </div>
     <div class="guessed-character">
       {{guessedCharacter}}
-      {{displayError}}
+      {{displayedMessage}}
       {{badAttemptCounter}}
     </div>
     <div class="guessed-characters">
