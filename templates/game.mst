@@ -7,29 +7,33 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="guess-letter-form">
-          <form class="" action="/attempt" method="post">
-            <input type="text" name="attemptedLetter" placeholder="Guess a letter!">
-            <button type="submit" name="button">Guess!</button>
-          </form>
+      <div class="input-output">
+        <div class="guess-letter-form">
+            <form class="" action="/attempt" method="post">
+              <input type="text" name="attemptedLetter" placeholder="Guess a letter!">
+              <button type="submit" name="button">Guess!</button>
+            </form>
+        </div>
+        <div class="guessed-character">
+          <p>
+            {{displayedMessage}}
+          </p>
+          <p>
+            Number of FAILS: {{badAttemptCounter}} / 8
+          </p>
+        </div>
+        <div class="guessed-characters">
+          Already Chosen: {{#attemptedLettersArray}}{{.}}{{/attemptedLettersArray}}
+        </div>
       </div>
-      <div class="guessed-character">
-        <p>
-          {{displayedMessage}}
-        </p>
-        <p>
-          Number of FAILS: {{badAttemptCounter}} / 8
-        </p>
-      </div>
-      <div class="guessed-characters">
-        Already Chosen: {{#attemptedLettersArray}}{{.}}{{/attemptedLettersArray}}
-      </div>
-      <div class="hidden-word">
-        {{#hiddenWord}}
-        {{.}}
-        {{/hiddenWord}}
-      </div>
-      <div class="attempt-image-{{badAttemptCounter}}">
+      <div class="board">
+        <div class="hidden-word">
+          {{#hiddenWord}}
+          {{.}}
+          {{/hiddenWord}}
+        </div>
+        <div class="attempt-image-{{badAttemptCounter}}">
+        </div>
       </div>
     </div>
   </body>

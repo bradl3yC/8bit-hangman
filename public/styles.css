@@ -1,6 +1,7 @@
 body {
   background: linear-gradient(to right, #1c92d2, #f2fcfe);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
@@ -9,19 +10,42 @@ body {
 
 .wrapper {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.main {
+  display: flex;
   flex-direction: column;
 }
 
-.wrapper input {
+.main input {
   height: 30px;
+  font-size: .7em;
+  border-radius: 5px;
+  border: none;
 }
 
-.wrapper ul {
+.main ul {
   list-style: none;
 }
 
-.wrapper a {
+body a {
   color: white;
+}
+
+.input-output {
+  display: flex;
+  flex-direction: column;
+  margin: 3em 3em;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 3em;
 }
 
 button {
