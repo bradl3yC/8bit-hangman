@@ -1,7 +1,35 @@
+body {
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 80%;
+  background-color: #666;
+  border-radius: 10px;
+}
+
+button {
+  border-radius: 5px;
+  border: none;
+  background-color: #377f84;
+  color: white;
+  width: 70px;
+  height: 30px;
+}
+
+.hidden-word {
+  font-size: 3em;
+  font-weight: lighter;
+}
+
 .attempt-image-0 {
   background-image: url('img/0.png');
   height: 400px;
   width: 200px;
+  margin-left: 25px;
 }
 
 .attempt-image-1 {
