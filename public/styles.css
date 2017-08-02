@@ -1,20 +1,33 @@
 body {
-  background-color: #ccc;
+  background: linear-gradient(to right, #1c92d2, #f2fcfe);
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
+  font-family: "Comic Sans MS";
 }
 
 .wrapper {
-  width: 80%;
-  background-color: #666;
-  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper input {
+  height: 30px;
+}
+
+.wrapper ul {
+  list-style: none;
+}
+
+.wrapper a {
+  color: white;
 }
 
 button {
   border-radius: 5px;
   border: none;
-  background-color: #377f84;
+  background-color: #1c92d2;
   color: white;
   width: 70px;
   height: 30px;

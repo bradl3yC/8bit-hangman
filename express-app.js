@@ -99,6 +99,10 @@ app.post('/attempt', (request, response) => {
   game = request.session
   game.displayedMessage = ''
 
+  if (game.fullWord === undefined) {
+    response.redirect('/')
+  }
+
   if (game.badAttemptCounter >= 8) {
     game.outcome = "Game Over"
 
