@@ -3,7 +3,6 @@ const app = express()
 const mustacheExpress = require('mustache-express')
 const bodyParser = require('body-parser')
 const fs = require('fs')
-const appHelper = require('./app')
 const expressValidator = require('express-validator')
 const expressSession = require('express-session')
 
