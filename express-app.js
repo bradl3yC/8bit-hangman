@@ -23,7 +23,7 @@ app.use(express.static('./public'))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(expressValidator())
 
-const words = fs.readFileSync("/usr/share/dict/words", "utf-8").toLowerCase().split("\n")
+const words = fs.readFileSync("./words.js", "utf-8").toLowerCase().split("\n")
 
 const getRandomInt = (min, max) => {
   min = Math.ceil(min)
