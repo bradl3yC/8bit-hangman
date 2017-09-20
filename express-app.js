@@ -151,6 +151,6 @@ app.post('/attempt', (request, response) => {
   response.render('game', game)
 })
 
-app.listen(3000, () => {
-  console.log('All your requests are belong to us - on port 3000')
+app.listen(80, () => {
+  console.log('listening')
 })
