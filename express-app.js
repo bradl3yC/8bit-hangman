@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const fs = require('fs')
 const expressValidator = require('express-validator')
 const expressSession = require('express-session')
+const port = process.env.PORT || 8080;
 
 app.use(
   expressSession({
@@ -151,4 +152,6 @@ app.post('/attempt', (request, response) => {
   response.render('game', game)
 })
 
-app.listen()
+app.listen(port, () => {
+  console.log('listening')
+})
