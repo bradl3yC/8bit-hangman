@@ -151,6 +151,4 @@ app.post('/attempt', (request, response) => {
   response.render('game', game)
 })
 
-app.listen(80, () => {
-  console.log('listening')
-})
+app.listen()
