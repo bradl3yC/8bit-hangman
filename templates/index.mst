@@ -10,7 +10,8 @@
     <div class="wrapper">
       <div class="main">
         <header>
-          <h1>Choose your difficulty</h1>
+          <h1>Welcome to 8Bit Hangman</h1>
+          <h4>Choose your difficulty:</h4>
         </header>
         <section>
           <ul>

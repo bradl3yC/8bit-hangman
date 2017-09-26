@@ -80,13 +80,18 @@ table {
 
 .main input {
   height: 30px;
-  font-size: .7em;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1em;
   border-radius: 5px;
   border: none;
 }
 
 .main ul {
   list-style: none;
+}
+
+.main li {
+  margin: 10px;
 }
 
 body a {
@@ -108,11 +113,12 @@ body a {
 }
 
 button {
+  font-family: 'Press Start 2P', cursive;
   border-radius: 5px;
   border: none;
-  background-color: #1c92d2;
+  background-color: #cc4b09;
   color: white;
-  width: 70px;
+  width: 80px;
   height: 30px;
 }
 

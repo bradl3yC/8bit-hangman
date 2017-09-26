@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="heading">
-      <h1>8 Bit Hangman!</h1>
+      <h1>8Bit Hangman!</h1>
     </div>
     <div class="wrapper">
       <div class="mario">
