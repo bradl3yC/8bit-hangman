@@ -3,8 +3,13 @@ body {
   font-family: 'Press Start 2P', cursive;
 }
 
-.mario {
-  height: 100%;
+.bowzer {
+  margin-left: 50px;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
 }
 
 .game-container {
@@ -12,24 +17,20 @@ body {
   flex-direction: column;
 }
 
-.chat-bubble {
-
-}
-
 .shell {
-  margin-top: 100px;
+  margin-top: 225px;
 }
 
 .white {
   background-color: white;
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
 }
 
 .green {
   background-color: #0f7f12;
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
 }
 
 table {
@@ -38,8 +39,8 @@ table {
 
 .red {
   background-color: #cc4b09;
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
 }
 
 .green {
@@ -48,20 +49,20 @@ table {
 
 .orange {
   background-color: #fc9843;
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
 }
 
 .brown {
   background-color: #986809;
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
 }
 
 .black {
   background-color: black;
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
 }
 
 .wrapper {
@@ -69,6 +70,7 @@ table {
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 5em;
+  justify-content: center;
 }
 
 .main {
@@ -115,6 +117,6 @@ button {
 }
 
 .hidden-word {
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: lighter;
 }

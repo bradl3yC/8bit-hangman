@@ -105,7 +105,7 @@ app.post('/attempt', (request, response) => {
 
   if (game.livesLeft === 0) {
     game.outcome = "Game Over"
-
+    game.displayedMessage = "Game Over"
     response.render('result', game)
     return
   }
@@ -127,7 +127,7 @@ app.post('/attempt', (request, response) => {
   game.attemptedLetter = request.body.attemptedLetter.toLowerCase()
 
   if (game.attemptedLettersArray.includes(game.attemptedLetter)) {
-    game.displayedMessage = "You already guessed that letter! Sheesh."
+    game.displayedMessage = "You already guessed that!"
 
     response.render('game', game)
     return
