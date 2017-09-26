@@ -3,22 +3,23 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
-    <title>Hangman</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <title>8Bit Hangman</title>
   </head>
   <body>
     <div class="wrapper">
       <div class="main">
-      <header>
-        <h1>Choose your difficulty</h1>
-      </header>
-      <section>
-        <ul>
-          <li><a href="/easy">Easy</a></li>
-          <li><a href="/normal">Normal</a></li>
-          <li><a href="/hard">Hard</a></li>
-        </ul>
-      </section>
+        <header>
+          <h1>Choose your difficulty</h1>
+        </header>
+        <section>
+          <ul>
+            <li><a href="/easy">Easy</a></li>
+            <li><a href="/normal">Normal</a></li>
+            <li><a href="/hard">Hard</a></li>
+          </ul>
+        </section>
+      </div>
     </div>
-  </div>
   </body>
 </html>

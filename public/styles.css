@@ -1,17 +1,74 @@
 body {
-  background: linear-gradient(to right, #1c92d2, #f2fcfe);
+  background-color: #5d94f9;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.mario {
+  height: 100%;
+}
+
+.game-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-family: "Comic Sans MS";
+}
+
+.chat-bubble {
+
+}
+
+.shell {
+  margin-top: 100px;
+}
+
+.white {
+  background-color: white;
+  width: 15px;
+  height: 15px;
+}
+
+.green {
+  background-color: #0f7f12;
+  width: 15px;
+  height: 15px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.red {
+  background-color: #cc4b09;
+  width: 15px;
+  height: 15px;
+}
+
+.green {
+  background-color: #0f7f12;
+}
+
+.orange {
+  background-color: #fc9843;
+  width: 15px;
+  height: 15px;
+}
+
+.brown {
+  background-color: #986809;
+  width: 15px;
+  height: 15px;
+}
+
+.black {
+  background-color: black;
+  width: 15px;
+  height: 15px;
 }
 
 .wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-top: 5em;
 }
 
 .main {
@@ -45,7 +102,7 @@ body a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1em 3em;
+  margin: 1em;
 }
 
 button {
@@ -60,67 +117,4 @@ button {
 .hidden-word {
   font-size: 3em;
   font-weight: lighter;
-}
-
-.attempt-image-0 {
-  background-image: url('img/0.png');
-  height: 400px;
-  width: 200px;
-  margin-left: 25px;
-}
-
-.attempt-image-1 {
-  background-image: url('img/1.png');
-  height: 100%;
-  height: 400px;
-  width: 200px;
-}
-
-.attempt-image-2 {
-  background-image: url('img/2.png');
-  height: 100%;
-  height: 400px;
-  width: 200px;
-}
-
-.attempt-image-3 {
-  background-image: url('img/3.png');
-  height: 100%;
-  height: 400px;
-  width: 200px;
-}
-
-.attempt-image-4 {
-  background-image: url('img/4.png');
-  height: 100%;
-  height: 400px;
-  width: 200px;
-}
-
-.attempt-image-5 {
-  background-image: url('img/5.png');
-  height: 100%;
-  height: 400px;
-  width: 200px;
-}
-
-.attempt-image-6 {
-  background-image: url('img/6.png');
-  height: 100%;
-  height: 400px;
-  width: 200px;
-}
-
-.attempt-image-7 {
-  background-image: url('img/7.png');
-  height: 100%;
-  height: 400px;
-  width: 200px;
-}
-
-.attempt-image-8 {
-  background-image: url('img/8.png');
-  height: 100%;
-  height: 400px;
-  width: 200px;
 }

@@ -58,7 +58,7 @@ const hideWord = (word) => {
 app.get('/', (request, response) => {
   game = request.session
   game.attemptedLettersArray = []
-  game.badAttemptCounter = 0
+  game.livesLeft = 8
 
   response.render('index')
 })
@@ -103,7 +103,7 @@ app.post('/attempt', (request, response) => {
     response.redirect('/')
   }
 
-  if (game.badAttemptCounter >= 8) {
+  if (game.livesLeft === 0) {
     game.outcome = "Game Over"
 
     response.render('result', game)
@@ -136,7 +136,7 @@ app.post('/attempt', (request, response) => {
   game.attemptedLettersArray.push(game.attemptedLetter)
 
   if (!game.fullWord.includes(game.attemptedLetter)) {
-    game.badAttemptCounter++
+    game.livesLeft--
   }
 
   game.hiddenWord = game.hiddenWord
